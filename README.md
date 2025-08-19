@@ -65,7 +65,7 @@ python whitesecross.py -u http://target.com --sinks
 
 ### Use headless browser for DOM XSS
 ```bash
-python whitesecross.py -u http://target.com --headless
+python whitesecross.py -u http://target.com --dom
 ```
 
 ### Display help menu
@@ -92,7 +92,7 @@ python whitesecross.py -u http://testphp.vulnweb.com --threads 10
 
 ### Scan subdomains and detect DOM XSS
 ```bash
-python whitesecross.py -u http://example.com --subs --sinks --headless
+python whitesecross.py -u http://example.com --subs --sinks --dom
 ```
 
 ## Adding Custom Payloads
@@ -113,7 +113,7 @@ PAYLOADS = [
 
 1. **Crawling**: Discovers internal links and JS files
 2. **Payload Injection**: Tests URLs with parameters for XSS
-3. **DOM XSS Detection**: Uses headless browser if `--headless` is set
+3. **DOM XSS Detection**: Uses headless browser if `--dom` is set
 4. **Reporting**: Shows results in terminal and optionally saves them
 
 ## Notes
