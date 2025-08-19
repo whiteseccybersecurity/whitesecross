@@ -1,18 +1,29 @@
-```markdown
 # Whitesecross - Advanced XSS Scanner
 
-Whitesecross is a **Python-based XSS vulnerability scanner** designed for penetration testers, bug bounty hunters, and security researchers.  
-It can crawl websites, detect URLs and JavaScript files, inject payloads, and report potential XSS vulnerabilities.
+Whitesecross is a Python-based **Cross-Site Scripting (XSS) vulnerability scanner** designed for penetration testers, bug bounty hunters, and security researchers.  
+It can crawl target websites, discover URLs and JavaScript files, inject custom payloads, and report potential XSS vulnerabilities.
+
+---
+
+## Features
+
+- Deep website crawling to discover hidden pages, parameters, and JavaScript files  
+- Multi-threaded scanning for faster results  
+- Optionally scan subdomains of the target domain  
+- Customizable payload injection to test XSS vulnerabilities  
+- Headless browser support for DOM-based XSS detection  
+- Generates a results file for reporting and analysis  
 
 ---
 
 ## Installation
 
-### 1. Clone the repository
+1. Clone the repository:
+
 ```bash
-git clone https://github.com/whiteseccybersecurity/Whitesecross.git
+git clone https://github.com/YourUsername/Whitesecross.git
 cd Whitesecross
-```
+
 
 ### 2. Install required Python packages
 ```bash
