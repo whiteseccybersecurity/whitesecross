@@ -1,19 +1,8 @@
-````markdown
+```markdown
 # Whitesecross - Advanced XSS Scanner
 
-Whitesecross is a **Python-based XSS vulnerability scanner** for penetration testers, bug bounty hunters, and security researchers.  
+Whitesecross is a **Python-based XSS vulnerability scanner** designed for penetration testers, bug bounty hunters, and security researchers.  
 It can crawl websites, detect URLs and JavaScript files, inject payloads, and report potential XSS vulnerabilities.
-
----
-
-## Features
-
-- Deep crawling to find hidden pages, links, and JS files  
-- Multi-threaded scanning for speed  
-- Optionally scan subdomains  
-- Customizable XSS payloads  
-- Headless browser support for DOM XSS detection  
-- Save results to a file for reporting  
 
 ---
 
@@ -21,99 +10,80 @@ It can crawl websites, detect URLs and JavaScript files, inject payloads, and re
 
 ### 1. Clone the repository
 ```bash
-git clone https:/whiteseccybersecurity/github.com//Whitesecross.git
+git clone https://github.com/whiteseccybersecurity/Whitesecross.git
 cd Whitesecross
-````
+```
 
-### 2. Install required packages
-
+### 2. Install required Python packages
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 3. Recommended: Python virtual environment
-
 ```bash
 python3 -m venv whitesecross-env
 source whitesecross-env/bin/activate
 pip install -r requirements.txt
 ```
 
----
-
 ## Usage
 
 ### Run basic scan
-
 ```bash
 python whitesecross.py -u http://target.com
 ```
 
 ### Save results to a file
-
 ```bash
 python whitesecross.py -u http://target.com -o xss-results.txt
 ```
 
 ### Use multiple threads (default: 5)
-
 ```bash
 python whitesecross.py -u http://target.com --threads 10
 ```
 
 ### Scan subdomains
-
 ```bash
 python whitesecross.py -u http://target.com --subs
 ```
 
 ### Scan for DOM-based XSS (JS sinks)
-
 ```bash
 python whitesecross.py -u http://target.com --sinks
 ```
 
 ### Use headless browser for DOM XSS
-
 ```bash
 python whitesecross.py -u http://target.com --headless
 ```
 
 ### Display help menu
-
 ```bash
 python whitesecross.py -h
 ```
 
----
-
 ## Examples
 
-**Basic scan**
-
+### Basic scan
 ```bash
 python whitesecross.py -u http://testphp.vulnweb.com
 ```
 
-**Scan and save results**
-
+### Scan and save results
 ```bash
 python whitesecross.py -u http://testphp.vulnweb.com -o results.txt
 ```
 
-**Scan with 10 threads**
-
+### Scan with 10 threads
 ```bash
 python whitesecross.py -u http://testphp.vulnweb.com --threads 10
 ```
 
-**Scan subdomains and detect DOM XSS**
-
+### Scan subdomains and detect DOM XSS
 ```bash
 python whitesecross.py -u http://example.com --subs --sinks --headless
 ```
-
----
 
 ## Adding Custom Payloads
 
@@ -129,38 +99,17 @@ PAYLOADS = [
 ]
 ```
 
----
-
 ## How Whitesecross Works
 
-1. **Crawling:** Discovers internal links and JS files
-2. **Payload Injection:** Tests URLs with parameters for XSS
-3. **DOM XSS Detection:** Uses headless browser if `--headless` is set
-4. **Reporting:** Shows results in terminal and optionally saves them
-
----
-
-## Project Structure
-
-```
-whitesecross/
-│── core/
-│   ├── crawler.py      # Website crawler
-│   ├── scanner.py      # XSS payload injection
-│   ├── utils.py        # Logging and helper functions
-│── whitesecross.py     # Main script
-│── requirements.txt    # Python dependencies
-│── README.md           # Documentation
-│── LICENSE             # License file
-```
-
----
+1. **Crawling**: Discovers internal links and JS files
+2. **Payload Injection**: Tests URLs with parameters for XSS
+3. **DOM XSS Detection**: Uses headless browser if `--headless` is set
+4. **Reporting**: Shows results in terminal and optionally saves them
 
 ## Notes
 
-* Python 3 recommended; Python 2 partially supported
-* Only test websites you own or have permission to test
-* More threads = faster scanning but higher server load
-* Activate virtual environment to avoid dependency conflicts
-
----
+- Python 3 recommended; Python 2 partially supported
+- Only test websites you own or have permission to test
+- More threads = faster scanning but higher server load
+- Activate virtual environment to avoid dependency conflicts
+```
