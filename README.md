@@ -18,14 +18,13 @@ It can crawl target websites, discover URLs and JavaScript files, inject custom 
 
 ## Installation
 
-1. Clone the repository:
-
+### 1. Clone the repository:
 ```bash
 git clone https://github.com/YourUsername/Whitesecross.git
 cd Whitesecross
+```
 
-
-### 2. Install required Python packages
+### 𝟮. 𝗜𝗻𝘀𝘁𝗮𝗹𝗹 𝗿𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗣𝘆𝘁𝗵𝗼𝗻 𝗽𝗮𝗰𝗸𝗮𝗴𝗲𝘀
 ```bash
 pip install -r requirements.txt
 ```
