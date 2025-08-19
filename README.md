@@ -20,7 +20,7 @@ It can crawl target websites, discover URLs and JavaScript files, inject custom 
 
 ### 1. Clone the repository:
 ```bash
-git clone https://github.com/YourUsername/Whitesecross.git
+git clone https://github.com/whiteseccybersecurity/Whitesecross.git
 cd Whitesecross
 ```
 
@@ -122,4 +122,3 @@ PAYLOADS = [
 - Only test websites you own or have permission to test
 - More threads = faster scanning but higher server load
 - Activate virtual environment to avoid dependency conflicts
-```
